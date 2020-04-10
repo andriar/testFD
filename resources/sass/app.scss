@@ -1,0 +1,309 @@
+@font-face {
+	font-family: Montserrat;
+	src: url("../assets//fonts//montserrat/Montserrat-Light.otf") format("opentype");
+}
+
+@font-face {
+	font-family: Montserrat-Bold;
+	src: url("../assets//fonts//montserrat/Montserrat-Bold.otf") format("opentype");
+}
+
+#app {
+	font-family: 'Montserrat', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	letter-spacing: 0.05em;
+}
+
+#contact {
+	font-size: 11px;
+	div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+#menus {
+	font-size: 11px;
+	padding: 30px 0px 30px 0px;
+}
+
+#banner {
+	padding: 20px 0px 20px 0px;
+}
+
+.border-bottom {
+	border: medium;
+	border-style: solid;
+	border-width: 0.5px;
+	border-right-width: 0px;
+	border-left-width: 0px;
+	border-top-width: 0px;
+	border-color: #ecf0f1;
+}
+
+.border-bottom-2 {
+	border: medium;
+	border-style: solid;
+	border-width: 0.1px;
+	border-right-width: 0px;
+	border-left-width: 0px;
+	border-top-width: 0px;
+	border-color: #222f3e;
+	padding-bottom: 20px;
+}
+
+.border {
+	border: medium;
+	border-style: solid;
+	border-width: 0.5px;
+	border-color: #ecf0f1;
+}
+
+.slice-border {
+	border: medium;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #ecf0f1;
+	width: 100px;
+}
+
+.flex {
+	flex: 1;
+}
+
+.flex-2 {
+	flex: 6;
+}
+
+.left {
+	text-align: left;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.flex-row-sp {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-center {
+	justify-content: center;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.mh-5 {
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.mh-20 {
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.mv-5 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.mv-20 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.mr-5 {
+	margin-right: 5px;
+}
+
+.container {
+	padding: 5px 150px 5px 150px;
+}
+
+.btn-menu {
+	margin: 0px 10px 0px 10px;
+	padding: 5px 10px 5px 10px;
+	font-size: 12px;
+}
+
+.image-container {
+	justify-content: center;
+	text-align: center;
+}
+
+.font-bold {
+	font-family: 'Montserrat-Bold', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.font-22 {
+	font-size: 22px;
+}
+
+.font-26 {
+	font-size: 26px;
+}
+
+.font-12 {
+	font-size: 12px;
+}
+
+.font-8 {
+	font-size: 8px;
+}
+
+.font-11 {
+	font-size: 11px;
+}
+
+.font-info {
+	font-weight: 100;
+}
+
+.promo-table {
+	padding: 5px 10px 5px 10px;
+	width: 200px;
+}
+
+.best {
+	background-color: #3498db;
+	color: #ffffff;
+}
+
+.feature-php {
+	padding: 5px 10px 5px 10px;
+	width: 300px;
+}
+
+.packet {
+	width: 320px;
+	img {
+		height: 50px;
+		margin-bottom: 10px;
+	}
+}
+
+.module {
+	width: 250px;
+	padding-left: 50px;
+}
+
+.others {
+	width: 250px;
+}
+
+.others-2 {
+	width: 320px;
+}
+
+.btn-blue-rounded {
+	background-color: #3498db;
+	padding: 10px 10px 10px 10px;
+	color: #ffffff;
+	border-radius: 20px;
+}
+
+.btn-white-outline-rounded {
+	background-color: #ffffff;
+	padding: 10px 10px 10px 10px;
+	color: #3f3f3f;
+	border-radius: 20px;
+	border-width: 0.5px;
+	border-color: #3f3f3f;
+	border: solid;
+}
+
+.btn-blue-outline-rounded {
+	background-color: #3498db;
+	padding: 10px 10px 10px 10px;
+	color: #ffff;
+	border-radius: 20px;
+	border-width: 0.5px;
+	border-color: #ffffff;
+	border: solid;
+}
+
+#likes {
+	background-color: #ecf0f1;
+	min-height: 5vh;
+	div {
+		min-height: 5vh;
+		align-items: center;
+	}
+}
+
+#help {
+	background-color: #3498db;
+	min-height: 10vh;
+	color: #ffffff;
+	div {
+		min-height: 10vh;
+		align-items: center;
+	}
+}
+
+#others {
+	background-color: #2f3640;
+	min-height: 50vh;
+	color: #ffffff;
+	padding: 20px 0px 100px 0px;
+	font-size: 12px;
+}
+
+.input-email {
+	background-color: #ffffff;
+	color: #000000;
+	padding: 5px;
+	border-radius: 20px;
+}
+
+.email {
+	background-color: #ffffff;
+	border-radius: 20px;
+	padding: 2px;
+	width: 250px;
+}
+
+input {
+	outline: none;
+}
+
+button {
+	outline: none;
+}
+
+.btn-social-media {
+	background-color: #2f3640;
+	border-radius: 100px;
+	border-color: #ffffff;
+	color: #ffffff;
+	border: solid;
+	border-width: 2px;
+	margin: 0px 20px 0px 20px;
+	height: 30px;
+	width: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		background-color: lightblue;
+	}
+}
