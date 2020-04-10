@@ -174,7 +174,40 @@ export default class Home extends Vue {
 		'uuid',
 	];
 
+	packets: any[] = [
+		{
+			title: 'PHP Semua Versi',
+			description: 'Pilih mulai dari versi PHP 5.3 s/d PHP 7. Ubaj sesuka Anda!',
+			image: require('../../assets/svg/phpversion.svg'),
+		},
+		{
+			title: 'MySQL Versi 5.6',
+			description: 'Nikmati MySQL versi terbaru, tercepat dan kaya akan fitur',
+			image: require('../../assets/svg/hosting_mysql.svg'),
+		},
+		{
+			title: 'Panel Hosting cPanel',
+			description: 'Kelola Website dengan panel canggil yang familiar di hati anda',
+			image: require('../../assets/svg/cpanel.svg'),
+		},
+		{
+			title: 'Garansi Uptime 99.9%',
+			description: 'Data center yang mendukung kelangsungan website Anda 24/7',
+			image: require('../../assets/svg/uptime.svg'),
+		},
+		{
+			title: 'Database InnoDB unlimited',
+			description: 'Jumlah dan ukuran database yang tumbuh sesuai kebutuhan Anda',
+			image: require('../../assets/svg/innoDB.svg'),
+		},
+		{
+			title: 'Wildcard Remote MySQL',
+			description: 'Mendukung s/d 25 max_user_connections dan 100 max-connections',
+			image: require('../../assets/svg/mysql.svg'),
+		},
+	];
+
 	whoBestSeller(best: boolean) {
-		return best ? 'best flex-column border image-container' : 'flex-column border image-container';
+		return best ? 'best flex-column border image-container mh-5' : 'flex-column border image-container mh-5';
 	}
 }

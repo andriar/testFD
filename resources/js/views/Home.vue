@@ -30,8 +30,8 @@
       </div>
     </div>
 
-    <div id="banner" class="flex-row container border-bottom flex-wrap">
-      <div class="flex-column flex">
+    <div class="flex-row-sp container flex-center flex-wrap">
+      <div class="flex" style="max-width: 600px">
         <p class="font-26 mv-5 font-bold">PHP Hosting</p>
         <p class="mv-5">Cepat, handal, penuh dengan modul PHP yang Anda Butuhkan</p>
         <div>
@@ -41,27 +41,27 @@
           </div>
         </div>
       </div>
-      <div class="image-container flex">
-        <img src="../../assets/svg/banner.svg" style="height:250px" />
+      <div class="flex image-container">
+        <img src="../../assets/svg/banner.svg" class="banner-image" />
       </div>
     </div>
 
-    <div id="feature" class="flex-row container flex-center mv-20">
-      <div class="flex-column mh-20">
-        <div class="image-container flex center">
-          <img src="../../assets/svg/zendguard.svg" style="height:auto; width: 150px;" />
+    <div id="feature" class="flex-row container flex-center mv-20 flex-wrap">
+      <div class="flex-column mh-20 mv-20">
+        <div class="image-container flex center image-center">
+          <img src="../../assets/images/zendguard.png" style="height:auto; width: 150px;" />
         </div>
         <p class="font-12" style="text-align: center">PHP Zend Guard Loader</p>
       </div>
-      <div class="flex-column mh-20">
-        <div class="image-container flex">
-          <img src="../../assets/svg/composer.svg" style="height:auto; width: 150px" />
+      <div class="flex-column mh-20 mv-20">
+        <div class="image-container flex image-center">
+          <img src="../../assets/images/composer.png" style="height:auto; width: 150px" />
         </div>
         <p class="font-12" style="text-align: center">PHP Composer</p>
       </div>
-      <div class="flex-column mh-20">
-        <div class="image-container flex">
-          <img src="../../assets/svg/ioncube.svg" style="height:auto; width: 150px" />
+      <div class="flex-column mh-20 mv-20">
+        <div class="image-container flex image-center">
+          <img src="../../assets/images/ioncube.png" style="height:auto; width: 150px" />
         </div>
         <p class="font-12" style="text-align: center">PHP IonCube Loader</p>
       </div>
@@ -72,7 +72,7 @@
       <p>Diskon 40% + domain dan SSL Gratis Untuk Anda</p>
     </div>
 
-    <div class="flex-row flex-center container" id="promo">
+    <div class="flex-row flex-center container flex-wrap" id="promo">
       <div :class="whoBestSeller(promo.best_price)" v-for="(promo, index) in promos" :key="index">
         <div class="promo-table font-bold border-bottom">{{promo.title}}</div>
         <div>{{promo.price}}</div>
@@ -81,7 +81,7 @@
 
     <div class="flex-column flex-center container image-container">
       <p class="font-22 mv-5">Powerful dengan limit PHP yang Lebih Besar</p>
-      <div id="feature" class="flex-row container flex-center mv-20">
+      <div id="feature" class="flex-row container flex-center mv-20 flex-wrap">
         <div class="flex-column mh-20">
           <div class="border feature-php flex-row">
             <div class="flex left">
@@ -134,35 +134,10 @@
     <div class="flex-column flex-center container image-container">
       <p class="font-22 mv-20">Semua Paket Hosting Sudah Termasuk</p>
       <div class="flex-row flex-wrap flex-center">
-        <div class="flex-column mh-20 packet mv-20">
-          <img src="../../assets/svg/phpversion.svg" />
-          <p class="font-bold">PHP Semua Versi</p>
-          <p class="font-12">Pilih mulai dari versi PHP 5.3 s/d PHP 7. Ubah sesuka anda!</p>
-        </div>
-        <div class="flex-column mh-20 packet">
-          <img src="../../assets/svg/hosting_mysql.svg" />
-          <p class="font-bold">PHP Semua Versi</p>
-          <p class="font-12">Pilih mulai dari versi PHP 5.3 s/d PHP 7. Ubah sesuka anda!</p>
-        </div>
-        <div class="flex-column mh-20 packet">
-          <img src="../../assets/svg/cpanel.svg" />
-          <p class="font-bold">PHP Semua Versi</p>
-          <p class="font-12">Pilih mulai dari versi PHP 5.3 s/d PHP 7. Ubah sesuka anda!</p>
-        </div>
-        <div class="flex-column mh-20 packet">
-          <img src="../../assets/svg/uptime.svg" />
-          <p class="font-bold">PHP Semua Versi</p>
-          <p class="font-12">Pilih mulai dari versi PHP 5.3 s/d PHP 7. Ubah sesuka anda!</p>
-        </div>
-        <div class="flex-column mh-20 packet">
-          <img src="../../assets/svg/innoDB.svg" />
-          <p class="font-bold">PHP Semua Versi</p>
-          <p class="font-12">Pilih mulai dari versi PHP 5.3 s/d PHP 7. Ubah sesuka anda!</p>
-        </div>
-        <div class="flex-column mh-20 packet">
-          <img src="../../assets/svg/mysql.svg" />
-          <p class="font-bold">PHP Semua Versi</p>
-          <p class="font-12">Pilih mulai dari versi PHP 5.3 s/d PHP 7. Ubah sesuka anda!</p>
+        <div v-for="(packet, index) in packets" :key="index" class="flex-column mh-20 packet mv-20">
+          <img :src="packet.image" />
+          <p class="font-bold">{{packet.title}}</p>
+          <p class="font-12">{{packet.description}}</p>
         </div>
       </div>
     </div>
@@ -173,37 +148,39 @@
       </div>
     </div>
 
-    <div class="flex-column flex-center container image-container border-bottom">
+    <div class="flex-column flex-center container image-container">
       <p class="font-22 mv-20">Mendukung Penuh Framework Laravel</p>
-      <div class="flex-row">
-        <div class="flex-column flex left">
-          <p
-            class="mb-20"
-          >Tak perlu menggunakan dedicated server ataupun VPS yang mahal. Layanan PHP hosting murah kami mendukung penuh framework favorit Anda</p>
-          <div class="mb-20">
-            <div class="font-12 mv-5">
-              <v-icon class="mr-5" mr-5 small style="color:#2ecc71">mdi-check-circle</v-icon>Install laravel dengan
-              <span class="font-bold">1 klik</span> Softaculous Installer.
-            </div>
-            <div class="font-12 mv-5">
-              <v-icon class="mr-5" mr-5 small style="color:#2ecc71">mdi-check-circle</v-icon>Mendukung Eksitensi
-              <span class="font-bold">PHP MCrypt, phar, mbstring,</span> dan
-              <span class="font-bold">fileinfo</span>
-            </div>
-            <div class="font-12 mv-5">
-              <v-icon class="mr-5" mr-5 small style="color:#2ecc71">mdi-check-circle</v-icon>Tersedia
-              <span class="font-bold">Composer</span> dan
-              <span class="font-bold">SSH</span> untuk menginstal packages Anda.
-            </div>
+    </div>
+
+    <div class="flex-row-sp container flex-center flex-wrap border-bottom">
+      <div class="flex" style="max-width: 600px">
+        <p
+          class="mb-20"
+          style="max-width: 600px"
+        >Tak perlu menggunakan dedicated server ataupun VPS yang mahal. Layanan PHP hosting murah kami mendukung penuh framework favorit Anda</p>
+        <div class="mb-20">
+          <div class="font-12 mv-5">
+            <v-icon class="mr-5" mr-5 small style="color:#2ecc71">mdi-check-circle</v-icon>Install laravel dengan
+            <span class="font-bold">1 klik</span> Softaculous Installer.
           </div>
-          <p class="font-8 mb-20">Nb. Composer dan SSH hanya tersedia pada paket Personal dan Bisnis</p>
-          <div>
-            <button class="font-bold font-12 btn-blue-rounded left">Pilih Hosting Anda</button>
+          <div class="font-12 mv-5">
+            <v-icon class="mr-5" mr-5 small style="color:#2ecc71">mdi-check-circle</v-icon>Mendukung Eksitensi
+            <span class="font-bold">PHP MCrypt, phar, mbstring,</span> dan
+            <span class="font-bold">fileinfo</span>
+          </div>
+          <div class="font-12 mv-5">
+            <v-icon class="mr-5" mr-5 small style="color:#2ecc71">mdi-check-circle</v-icon>Tersedia
+            <span class="font-bold">Composer</span> dan
+            <span class="font-bold">SSH</span> untuk menginstal packages Anda.
           </div>
         </div>
-        <div class="image-container flex">
-          <img src="../../assets/svg/laravel.svg" style="width:400px" />
+        <p class="font-8 mb-20">Nb. Composer dan SSH hanya tersedia pada paket Personal dan Bisnis</p>
+        <div>
+          <button class="font-bold font-12 btn-blue-rounded left">Pilih Hosting Anda</button>
         </div>
+      </div>
+      <div class="flex image-container">
+        <img src="../../assets/svg/laravel.svg" style="width:400px" />
       </div>
     </div>
 
@@ -217,8 +194,8 @@
       </div>
     </div>
 
-    <div class="flex-row container flex-center flex-wrap">
-      <div>
+    <div class="flex-row-sp container flex-center flex-wrap">
+      <div class="flex" style="max-width: 600px">
         <p class="font-22 mv-20">Linux Hosting yang Stabil dengan Teknologi LVE</p>
         <p class="font-12 mb-20">
           SuperMicro
@@ -236,7 +213,7 @@
           <button class="font-bold font-12 btn-blue-rounded left">Pilih Hosting Anda</button>
         </div>
       </div>
-      <div>
+      <div class="flex image-container">
         <img src="../../assets/images/image_support.png" style="width:400px" />
       </div>
     </div>
@@ -249,16 +226,18 @@
     </div>
 
     <div id="help">
-      <div class="container flex-row">
+      <div class="container flex-row flex-wrap">
         <p class="font-26 flex">
           Perlu
           <span class="font-bold">BANTUAN?</span> Hubungi kami :
           <span class="font-bold">0274-5305505</span>.
         </p>
-        <button class="font-bold font-12 btn-blue-outline-rounded left flex-row">
-          <v-icon class="mh-5" small color="#ffffff">mdi-message</v-icon>
-          <span>Live Chat</span>
-        </button>
+        <div class="flex image-center">
+          <button class="font-bold font-12 btn-blue-outline-rounded flex-row">
+            <v-icon class="mh-5" small color="#ffffff">mdi-message</v-icon>
+            <span>Live Chat</span>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -332,17 +311,19 @@
               <input class="input-email" />
               <button class="btn-blue-rounded">Berlangganan</button>
             </div>
-            <button class="btn-social-media">
-              <v-icon color="#ffffff" medium>mdi-facebook</v-icon>
-            </button>
+            <div class="flex-row image-center">
+              <button class="btn-social-media">
+                <v-icon color="#ffffff" medium>mdi-facebook</v-icon>
+              </button>
 
-            <button class="btn-social-media">
-              <v-icon color="#ffffff" medium>mdi-twitter</v-icon>
-            </button>
+              <button class="btn-social-media">
+                <v-icon color="#ffffff" medium>mdi-twitter</v-icon>
+              </button>
 
-            <button class="btn-social-media">
-              <v-icon color="#ffffff" medium>mdi-google</v-icon>
-            </button>
+              <button class="btn-social-media">
+                <v-icon color="#ffffff" medium>mdi-google</v-icon>
+              </button>
+            </div>
           </div>
           <div class="flex-row mv-5">
             <p

@@ -33,6 +33,11 @@
 	padding: 20px 0px 20px 0px;
 }
 
+.banner-image {
+	height: 250px;
+	width: 400px;
+}
+
 .border-bottom {
 	border: medium;
 	border-style: solid;
@@ -146,6 +151,11 @@
 .image-container {
 	justify-content: center;
 	text-align: center;
+}
+
+.image-center {
+	display: flex;
+	align-items: center;
 }
 
 .font-bold {
@@ -264,7 +274,7 @@
 	background-color: #2f3640;
 	min-height: 50vh;
 	color: #ffffff;
-	padding: 20px 0px 100px 0px;
+	padding: 20px 0px 0px 0px;
 	font-size: 12px;
 }
 
@@ -279,7 +289,6 @@
 	background-color: #ffffff;
 	border-radius: 20px;
 	padding: 2px;
-	width: 250px;
 }
 
 input {
@@ -298,12 +307,42 @@ button {
 	border: solid;
 	border-width: 2px;
 	margin: 0px 20px 0px 20px;
-	height: 30px;
-	width: 30px;
+	height: 28px;
+	width: 28px;
 }
 
-@media only screen and (max-width: 600px) {
-	body {
-		background-color: lightblue;
+@media only screen and (max-width: 1260px) {
+	#contact {
+		display: none;
+	}
+
+	#menus {
+		display: none;
+	}
+
+	#banner {
+		text-align: center;
+	}
+
+	#laravel {
+		text-align: center;
+	}
+
+	.module {
+		width: 150px;
+		padding-left: 0px;
+	}
+
+	.btn-social-media {
+		margin: 0px 5px 0px 5px;
+	}
+
+	.font-26 {
+		font-size: 18px;
+	}
+
+	.btn-live {
+		margin: 5px 0px 5px 0px;
+		align-content: center;
 	}
 }
