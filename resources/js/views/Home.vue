@@ -87,9 +87,9 @@
 
     <div class="flex-row flex-center container flex-wrap font-12" id="promo">
       <div
-        class="flex-column image-container mv-5 ph-5"
+        class="flex-column mv-5 ph-5"
         :class="promo.best_price ? 'border-blue' : 'border'"
-        style="position: relative"
+        style="position: relative; text-align: center;"
         v-for="(promo, index) in promos"
         :key="index"
       >
