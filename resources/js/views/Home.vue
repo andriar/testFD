@@ -100,11 +100,11 @@
           class="promo-table font-bold font-20 p-10"
           :class="promo.best_price ? 'best' : ''"
         >{{promo.title}}</div>
-        <div class="p-10" :class="promo.best_price ? 'best' : ''">Rp {{promo.price}}</div>
+        <div class="p-10 price" :class="promo.best_price ? 'best' : ''">Rp {{promo.price}}</div>
         <div class="p-10" :class="promo.best_price ? 'best' : ''">
           Rp
-          <span class="font-bold font-26">{{String (promo.price).split('.')[0]}}</span>
-          <span class="font-bold">.{{String (promo.price).split('.')[1]}}</span>
+          <span class="font-bold font-26">{{String (promo.real_price).split('.')[0]}}</span>
+          <span class="font-bold">.{{String (promo.real_price).split('.')[1]}}</span>
           / {{promo.time}}
         </div>
         <div class="p-10" :class="promo.best_price ? 'best-2' : ''">
@@ -115,7 +115,7 @@
           <button
             :class="promo.best_price ? 'btn-blue-rounded': 'btn-white-outline-rounded'"
             class="font-bold font-12 left"
-          >Pilih Hosting Anda</button>
+          >{{ promo.discount > 0 ? `Diskon ${promo.discount*100}%`: 'Pilih Hosting Anda'}}</button>
         </div>
       </div>
     </div>

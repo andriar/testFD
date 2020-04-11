@@ -128,6 +128,8 @@
 }
 
 .flex-center {
+  display: -webkit-box;
+  display: flex;
   -webkit-box-pack: center;
           justify-content: center;
 }
@@ -380,10 +382,11 @@ button {
   font-size: 10px;
   color: #ffffff;
   text-align: center;
+  transform: unset;
   -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
   position: relative;
   padding: 7px 0;
   left: -25px;
@@ -409,6 +412,10 @@ button {
 
 .ribbon-green:after {
   right: 0;
+}
+
+.price {
+  text-decoration: line-through;
 }
 
 @media only screen and (max-width: 1260px) {

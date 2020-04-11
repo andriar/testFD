@@ -56,6 +56,7 @@ export default class Home extends Vue {
 		{
 			title: 'Bayi',
 			price: '19.000',
+			real_price: '19.000',
 			discount: 0,
 			users: 210,
 			time: 'bln',
@@ -72,6 +73,7 @@ export default class Home extends Vue {
 		{
 			title: 'Pelajar',
 			price: '19.000',
+			real_price: '19.000',
 			discount: 0,
 			users: 1021,
 			time: 'bln',
@@ -88,6 +90,7 @@ export default class Home extends Vue {
 		{
 			title: 'Personal',
 			price: '19.000',
+			real_price: '19.000',
 			discount: 0,
 			users: 1080,
 			time: 'bln',
@@ -104,7 +107,8 @@ export default class Home extends Vue {
 		{
 			title: 'Bisnis',
 			price: '19.000',
-			discount: 0,
+			real_price: '19.000',
+			discount: 0.4,
 			users: 800,
 			time: 'bln',
 			best_price: false,
