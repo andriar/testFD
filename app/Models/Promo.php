@@ -20,8 +20,14 @@ class Promo extends Model
              $model->id = self::generateUuid();
          });
     }
+
     public static function generateUuid()
     {
          return (string) Str::uuid();
+    }
+
+    public function features()
+    {
+        return $this->hasMany('App\Models\Feature');
     }
 }
