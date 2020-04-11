@@ -264,9 +264,8 @@ class PromoTableSeeder extends Seeder
         $promo = [];
         array_push($promo, $promo1, $promo2, $promo3, $promo4);
 
-        $num = 0;
+        $num = 1;
         foreach ($promo as $key => $value) {
-            $num++;
             $dete = [];
             if($num == 1){
                 $dete = $features1;
@@ -284,6 +283,7 @@ class PromoTableSeeder extends Seeder
                     $doto = array_merge($value2, array("promo_id" => $data['id']));
                     Feature::create($doto);
                 }
+            $num++;
         }
     }
 }

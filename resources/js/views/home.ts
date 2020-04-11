@@ -1,9 +1,27 @@
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
+import { PromoModule } from '../store/modules/promo';
+
 @Component({
 	name: 'Home',
 })
 export default class Home extends Vue {
+	get loading() {
+		return PromoModule.loading;
+	}
+
+	get loadingAction() {
+		return PromoModule.loadingAction;
+	}
+
+	get promos() {
+		return PromoModule.promos;
+	}
+
+	get promo() {
+		return PromoModule.promo;
+	}
+
 	menus: any[] = [
 		{
 			title: 'Hosting',
@@ -52,248 +70,248 @@ export default class Home extends Vue {
 		'Support PHP 5.3, PHP 5.4, PHP 5.5, PHP 5.6, PHP 7',
 		'Fitur Enkripsi IonCube dan Zend Guard Loaders',
 	];
-	promos: any[] = [
-		{
-			title: 'Bayi',
-			price: '19.000',
-			real_price: '14.900',
-			discount: 0,
-			users: '938',
-			time: 'bln',
-			best_price: false,
-			features: [
-				{
-					title: 'RESOURCE POWER',
-					body: '0.5 X',
-					imp: true,
-				},
-				{
-					title: 'Disk Space',
-					body: '500 MB',
-					imp: false,
-				},
-				{
-					title: 'Bandwidth',
-					body: 'Unlimited',
-					imp: false,
-				},
-				{
-					title: 'Databases',
-					body: 'Unlimited',
-					imp: false,
-				},
-				{
-					title: 'Domain',
-					body: '1',
-					imp: false,
-				},
-				{
-					title: 'Backup',
-					body: 'Instant',
-					imp: false,
-				},
-				{
-					title: 'Gratis Selamanya',
-					body: 'Unlimited SSL',
-					imp: false,
-				},
-			],
-		},
-		{
-			title: 'Pelajar',
-			price: '46.900',
-			real_price: '23.450',
-			discount: 0,
-			users: '4.168',
-			time: 'bln',
-			best_price: false,
-			features: [
-				{
-					title: 'RESOURCE POWER',
-					body: '1 X',
-					imp: true,
-				},
-				{
-					title: 'Disk Space',
-					body: '500 MB',
-					imp: false,
-				},
-				{
-					title: 'Bandwidth',
-					body: 'Unlimited',
-					imp: false,
-				},
-				{
-					title: 'POP3 Email',
-					body: 'Unlimited',
-					imp: false,
-				},
-				{
-					title: 'Databases',
-					body: 'Unlimited',
-					imp: false,
-				},
-				{
-					title: 'Addon Domain',
-					body: '10',
-					imp: false,
-				},
-				{
-					title: 'Backup',
-					body: 'Instant',
-					imp: false,
-				},
-				{
-					title: 'Selamanya',
-					body: 'Domain Gratis',
-					imp: false,
-				},
-				{
-					title: 'Gratis Selamanya',
-					body: 'Unlimited SSL',
-					imp: false,
-				},
-			],
-		},
-		{
-			title: 'Personal',
-			price: '58.900',
-			real_price: '38.900',
-			discount: 0,
-			users: '10.017',
-			time: 'bln',
-			best_price: true,
-			features: [
-				{
-					title: 'RESOURCE POWER',
-					body: '2 X',
-					imp: true,
-				},
-				{
-					title: 'Disk Space',
-					body: 'Unlimited',
-					imp: false,
-				},
-				{
-					title: 'Bandwidth',
-					body: 'Unlimited',
-					imp: false,
-				},
-				{
-					title: 'POP3 Email',
-					body: 'Unlimited',
-					imp: false,
-				},
-				{
-					title: 'Databases',
-					body: 'Unlimited',
-					imp: false,
-				},
-				{
-					title: 'Addon Domain',
-					body: 'Unlimited',
-					imp: false,
-				},
-				{
-					title: 'Backup',
-					body: 'Instant',
-					imp: false,
-				},
-				{
-					title: 'Selamanya',
-					body: 'Domain Gratis',
-					imp: false,
-				},
-				{
-					title: 'Gratis Selamanya',
-					body: 'Unlimited SSL',
-					imp: false,
-				},
-				{
-					title: 'Name Server',
-					body: 'Private',
-					imp: false,
-				},
-				{
-					title: 'Mail Protection',
-					body: 'SpamAssasin',
-					imp: false,
-				},
-			],
-		},
-		{
-			title: 'Bisnis',
-			price: '109.900',
-			real_price: '65.900',
-			discount: 0.4,
-			users: '3.552',
-			time: 'bln',
-			best_price: false,
-			features: [
-				{
-					title: 'RESOURCE POWER',
-					body: '3 X',
-					imp: true,
-				},
-				{
-					title: 'Disk Space',
-					body: 'Unlimited',
-					imp: false,
-				},
-				{
-					title: 'Bandwidth',
-					body: 'Unlimited',
-					imp: false,
-				},
-				{
-					title: 'POP3 Email',
-					body: 'Unlimited',
-					imp: false,
-				},
-				{
-					title: 'Databases',
-					body: 'Unlimited',
-					imp: false,
-				},
-				{
-					title: 'Addon Domain',
-					body: 'Unlimited',
-					imp: false,
-				},
-				{
-					title: 'Backup & Restore',
-					body: 'Magic Auto',
-					imp: false,
-				},
-				{
-					title: 'Selamanya',
-					body: 'Domain Gratis',
-					imp: false,
-				},
-				{
-					title: 'Gratis Selamanya',
-					body: 'Unlimited SSL',
-					imp: false,
-				},
-				{
-					title: 'Name Server',
-					body: 'Private',
-					imp: false,
-				},
-				{
-					title: 'Layanan Support',
-					body: 'Prioritas',
-					imp: false,
-					star: true,
-				},
-				{
-					title: 'Pro Mail Protection',
-					body: 'SpamExpert',
-					imp: false,
-				},
-			],
-		},
-	];
+	// promos: any[] = [
+	// 	{
+	// 		title: 'Bayi',
+	// 		price: '19.000',
+	// 		real_price: '14.900',
+	// 		discount: 0,
+	// 		users: '938',
+	// 		time: 'bln',
+	// 		best_price: false,
+	// 		features: [
+	// 			{
+	// 				title: 'RESOURCE POWER',
+	// 				body: '0.5 X',
+	// 				imp: true,
+	// 			},
+	// 			{
+	// 				title: 'Disk Space',
+	// 				body: '500 MB',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Bandwidth',
+	// 				body: 'Unlimited',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Databases',
+	// 				body: 'Unlimited',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Domain',
+	// 				body: '1',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Backup',
+	// 				body: 'Instant',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Gratis Selamanya',
+	// 				body: 'Unlimited SSL',
+	// 				imp: false,
+	// 			},
+	// 		],
+	// 	},
+	// 	{
+	// 		title: 'Pelajar',
+	// 		price: '46.900',
+	// 		real_price: '23.450',
+	// 		discount: 0,
+	// 		users: '4.168',
+	// 		time: 'bln',
+	// 		best_price: false,
+	// 		features: [
+	// 			{
+	// 				title: 'RESOURCE POWER',
+	// 				body: '1 X',
+	// 				imp: true,
+	// 			},
+	// 			{
+	// 				title: 'Disk Space',
+	// 				body: '500 MB',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Bandwidth',
+	// 				body: 'Unlimited',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'POP3 Email',
+	// 				body: 'Unlimited',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Databases',
+	// 				body: 'Unlimited',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Addon Domain',
+	// 				body: '10',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Backup',
+	// 				body: 'Instant',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Selamanya',
+	// 				body: 'Domain Gratis',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Gratis Selamanya',
+	// 				body: 'Unlimited SSL',
+	// 				imp: false,
+	// 			},
+	// 		],
+	// 	},
+	// 	{
+	// 		title: 'Personal',
+	// 		price: '58.900',
+	// 		real_price: '38.900',
+	// 		discount: 0,
+	// 		users: '10.017',
+	// 		time: 'bln',
+	// 		best_price: true,
+	// 		features: [
+	// 			{
+	// 				title: 'RESOURCE POWER',
+	// 				body: '2 X',
+	// 				imp: true,
+	// 			},
+	// 			{
+	// 				title: 'Disk Space',
+	// 				body: 'Unlimited',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Bandwidth',
+	// 				body: 'Unlimited',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'POP3 Email',
+	// 				body: 'Unlimited',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Databases',
+	// 				body: 'Unlimited',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Addon Domain',
+	// 				body: 'Unlimited',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Backup',
+	// 				body: 'Instant',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Selamanya',
+	// 				body: 'Domain Gratis',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Gratis Selamanya',
+	// 				body: 'Unlimited SSL',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Name Server',
+	// 				body: 'Private',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Mail Protection',
+	// 				body: 'SpamAssasin',
+	// 				imp: false,
+	// 			},
+	// 		],
+	// 	},
+	// 	{
+	// 		title: 'Bisnis',
+	// 		price: '109.900',
+	// 		real_price: '65.900',
+	// 		discount: 0.4,
+	// 		users: '3.552',
+	// 		time: 'bln',
+	// 		best_price: false,
+	// 		features: [
+	// 			{
+	// 				title: 'RESOURCE POWER',
+	// 				body: '3 X',
+	// 				imp: true,
+	// 			},
+	// 			{
+	// 				title: 'Disk Space',
+	// 				body: 'Unlimited',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Bandwidth',
+	// 				body: 'Unlimited',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'POP3 Email',
+	// 				body: 'Unlimited',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Databases',
+	// 				body: 'Unlimited',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Addon Domain',
+	// 				body: 'Unlimited',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Backup & Restore',
+	// 				body: 'Magic Auto',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Selamanya',
+	// 				body: 'Domain Gratis',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Gratis Selamanya',
+	// 				body: 'Unlimited SSL',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Name Server',
+	// 				body: 'Private',
+	// 				imp: false,
+	// 			},
+	// 			{
+	// 				title: 'Layanan Support',
+	// 				body: 'Prioritas',
+	// 				imp: false,
+	// 				star: true,
+	// 			},
+	// 			{
+	// 				title: 'Pro Mail Protection',
+	// 				body: 'SpamExpert',
+	// 				imp: false,
+	// 			},
+	// 		],
+	// 	},
+	// ];
 
 	navbarOpen: boolean = false;
 
@@ -390,11 +408,7 @@ export default class Home extends Vue {
 	];
 
 	mounted() {
-		this.promos = this.promos.map((el: any) => {
-			return {
-				...el,
-			};
-		});
+		this.fetchData();
 	}
 
 	whoBestSeller(best: boolean) {
@@ -403,5 +417,12 @@ export default class Home extends Vue {
 
 	navbar() {
 		this.navbarOpen = !this.navbarOpen;
+	}
+
+	async fetchData() {
+		const params = {
+			join: 'features',
+		};
+		await PromoModule.fetchAllPromo(params);
 	}
 }
