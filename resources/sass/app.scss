@@ -33,6 +33,10 @@
 	padding: 20px 0px 20px 0px;
 }
 
+.topnav {
+	display: none;
+}
+
 .banner-image {
 	height: 250px;
 	width: 400px;
@@ -64,6 +68,14 @@
 	border-style: solid;
 	border-width: 0.5px;
 	border-color: #ecf0f1;
+}
+
+.border-blue {
+	border: medium;
+	border-style: solid;
+	border-width: 0.5px;
+	border-color: #3498db;
+	border-radius: 4px;
 }
 
 .slice-border {
@@ -119,6 +131,11 @@
 	margin-left: 5px;
 }
 
+.mh-2 {
+	margin-right: 2px;
+	margin-left: 2px;
+}
+
 .mh-20 {
 	margin-right: 20px;
 	margin-left: 20px;
@@ -136,6 +153,14 @@
 
 .mr-5 {
 	margin-right: 5px;
+}
+
+.p-5 {
+	padding: 5px;
+}
+
+.p-10 {
+	padding: 10px;
 }
 
 .container {
@@ -164,6 +189,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.font-20 {
+	font-size: 20px;
+}
+
 .font-22 {
 	font-size: 22px;
 }
@@ -176,12 +205,8 @@
 	font-size: 12px;
 }
 
-.font-8 {
-	font-size: 8px;
-}
-
-.font-11 {
-	font-size: 11px;
+.font-10 {
+	font-size: 10px;
 }
 
 .font-info {
@@ -195,6 +220,11 @@
 
 .best {
 	background-color: #3498db;
+	color: #ffffff;
+}
+
+.best-2 {
+	background-color: #2980b9;
 	color: #ffffff;
 }
 
@@ -253,19 +283,19 @@
 
 #likes {
 	background-color: #ecf0f1;
-	min-height: 5vh;
+	min-height: 7vh;
 	div {
-		min-height: 5vh;
+		min-height: 7vh;
 		align-items: center;
 	}
 }
 
 #help {
 	background-color: #3498db;
-	min-height: 10vh;
+	min-height: 14vh;
 	color: #ffffff;
 	div {
-		min-height: 10vh;
+		min-height: 14vh;
 		align-items: center;
 	}
 }
@@ -311,6 +341,51 @@ button {
 	width: 28px;
 }
 
+.ribbon-wrapper-green {
+	width: 85px;
+	height: 88px;
+	overflow: hidden;
+	position: absolute;
+	top: -3px;
+	left: -3px;
+}
+
+.ribbon-green {
+	font-size: 10px;
+	color: #ffffff;
+	text-align: center;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	position: relative;
+	padding: 7px 0;
+	left: -25px;
+	top: 18px;
+	width: 120px;
+	background-color: #27ae60;
+	-webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+.ribbon-green:before,
+.ribbon-green:after {
+	content: "";
+	border-top: 3px solid #6e8900;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	position: absolute;
+	bottom: -3px;
+}
+
+.ribbon-green:before {
+	left: 0;
+}
+.ribbon-green:after {
+	right: 0;
+}
+
 @media only screen and (max-width: 1260px) {
 	#contact {
 		display: none;
@@ -321,11 +396,18 @@ button {
 	}
 
 	#banner {
-		text-align: center;
+		margin-top: 25px;
 	}
 
 	#laravel {
 		text-align: center;
+	}
+
+	#navbar {
+		display: flex;
+		justify-content: space-between;
+		padding: 10px;
+		position: relative;
 	}
 
 	.module {
@@ -344,5 +426,42 @@ button {
 	.btn-live {
 		margin: 5px 0px 5px 0px;
 		align-content: center;
+	}
+
+	.topnav {
+		display: block;
+		overflow: hidden;
+		background-color: #ffffff;
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	.topnav .close {
+		display: none;
+	}
+
+	.topnav .open {
+		display: block;
+	}
+
+	.topnav a {
+		color: #000000;
+		padding: 8px 16px;
+		text-decoration: none;
+		font-size: 12px;
+		display: block;
+	}
+
+	.topnav a.icon {
+		background: #ffffff;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.active {
+		height: 40px;
+		padding-left: 10px;
 	}
 }

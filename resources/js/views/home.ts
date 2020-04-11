@@ -27,7 +27,7 @@ export default class Home extends Vue {
 		},
 		{
 			title: 'Promo',
-			to: 'promo',
+			to: 'promos',
 		},
 		{
 			title: 'Pembayaran',
@@ -54,10 +54,11 @@ export default class Home extends Vue {
 	];
 	promos: any[] = [
 		{
-			title: 'hohoho',
-			price: 19000,
+			title: 'Bayi',
+			price: '19.000',
 			discount: 0,
-			users: 1021,
+			users: 210,
+			time: 'bln',
 			best_price: false,
 			feature: {
 				resource_power: '0.5',
@@ -69,10 +70,11 @@ export default class Home extends Vue {
 			},
 		},
 		{
-			title: 'hohoho',
-			price: 19000,
+			title: 'Pelajar',
+			price: '19.000',
 			discount: 0,
 			users: 1021,
+			time: 'bln',
 			best_price: false,
 			feature: {
 				resource_power: '0.5',
@@ -84,10 +86,11 @@ export default class Home extends Vue {
 			},
 		},
 		{
-			title: 'hohoho',
-			price: 19000,
+			title: 'Personal',
+			price: '19.000',
 			discount: 0,
-			users: 1021,
+			users: 1080,
+			time: 'bln',
 			best_price: true,
 			feature: {
 				resource_power: '0.5',
@@ -99,10 +102,11 @@ export default class Home extends Vue {
 			},
 		},
 		{
-			title: 'hohoho',
-			price: 19000,
+			title: 'Bisnis',
+			price: '19.000',
 			discount: 0,
-			users: 1021,
+			users: 800,
+			time: 'bln',
 			best_price: false,
 			feature: {
 				resource_power: '0.5',
@@ -114,6 +118,8 @@ export default class Home extends Vue {
 			},
 		},
 	];
+
+	navbarOpen: boolean = false;
 
 	modules: any[] = [
 		'icePHP',
@@ -208,6 +214,10 @@ export default class Home extends Vue {
 	];
 
 	whoBestSeller(best: boolean) {
-		return best ? 'best flex-column border image-container mh-5' : 'flex-column border image-container mh-5';
+		return best ? 'best flex-column border image-container  p-5' : 'flex-column border image-container  p-5';
+	}
+
+	navbar() {
+		this.navbarOpen = !this.navbarOpen;
 	}
 }

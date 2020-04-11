@@ -2,7 +2,10 @@
   <div>
     <div id="contact" class="flex-row-sp container">
       <div>
-        <div class="mr-5">asd</div>
+        <img
+          src="../../assets/svg/promo.svg"
+          style="height:30px; margin-top:-12px; margin-right: 5px;"
+        />
         <p>Gratis Ebook 9 Cara Cerdas Menggunakan Domain [x]</p>
       </div>
 
@@ -30,8 +33,18 @@
       </div>
     </div>
 
-    <div class="flex-row-sp container flex-center flex-wrap">
-      <div class="flex" style="max-width: 600px">
+    <div class="topnav">
+      <img src="../../assets/images/logo.png" class="active" />
+      <div :class="navbarOpen ? 'open' : 'close'">
+        <a :href="'#'+menu.to" v-for="(menu, index) in menus" :key="index">{{menu.title}}</a>
+      </div>
+      <a href="#" class="icon" v-on:click="navbar">
+        <v-icon medium>mdi-menu</v-icon>
+      </a>
+    </div>
+
+    <div id="banner" class="flex-row container flex-center flex-wrap">
+      <div class="flex" style="max-width: 600px; padding: 0px 12px 0px 12px;">
         <p class="font-26 mv-5 font-bold">PHP Hosting</p>
         <p class="mv-5">Cepat, handal, penuh dengan modul PHP yang Anda Butuhkan</p>
         <div>
@@ -72,10 +85,38 @@
       <p>Diskon 40% + domain dan SSL Gratis Untuk Anda</p>
     </div>
 
-    <div class="flex-row flex-center container flex-wrap" id="promo">
-      <div :class="whoBestSeller(promo.best_price)" v-for="(promo, index) in promos" :key="index">
-        <div class="promo-table font-bold border-bottom">{{promo.title}}</div>
-        <div>{{promo.price}}</div>
+    <div class="flex-row flex-center container flex-wrap font-12" id="promo">
+      <div
+        class="flex-column image-container mv-5 ph-5"
+        :class="promo.best_price ? 'border-blue' : 'border'"
+        style="position: relative"
+        v-for="(promo, index) in promos"
+        :key="index"
+      >
+        <div v-if="promo.best_price" class="ribbon-wrapper-green">
+          <div class="ribbon-green">BEST SELLER</div>
+        </div>
+        <div
+          class="promo-table font-bold font-20 p-10"
+          :class="promo.best_price ? 'best' : ''"
+        >{{promo.title}}</div>
+        <div class="p-10" :class="promo.best_price ? 'best' : ''">Rp {{promo.price}}</div>
+        <div class="p-10" :class="promo.best_price ? 'best' : ''">
+          Rp
+          <span class="font-bold font-26">{{String (promo.price).split('.')[0]}}</span>
+          <span class="font-bold">.{{String (promo.price).split('.')[1]}}</span>
+          / {{promo.time}}
+        </div>
+        <div class="p-10" :class="promo.best_price ? 'best-2' : ''">
+          <span class="font-bold">{{promo.users}}</span> Pengguna terdaftar
+        </div>
+        <div class="p-10"></div>
+        <div class="p-10">
+          <button
+            :class="promo.best_price ? 'btn-blue-rounded': 'btn-white-outline-rounded'"
+            class="font-bold font-12 left"
+          >Pilih Hosting Anda</button>
+        </div>
       </div>
     </div>
 
@@ -174,13 +215,13 @@
             <span class="font-bold">SSH</span> untuk menginstal packages Anda.
           </div>
         </div>
-        <p class="font-8 mb-20">Nb. Composer dan SSH hanya tersedia pada paket Personal dan Bisnis</p>
+        <p class="font-10 mb-20">Nb. Composer dan SSH hanya tersedia pada paket Personal dan Bisnis</p>
         <div>
           <button class="font-bold font-12 btn-blue-rounded left">Pilih Hosting Anda</button>
         </div>
       </div>
       <div class="flex image-container">
-        <img src="../../assets/svg/laravel.svg" style="width:400px" />
+        <img src="../../assets/svg/laravel.svg" style="width:350px" />
       </div>
     </div>
 
@@ -227,7 +268,7 @@
 
     <div id="help">
       <div class="container flex-row flex-wrap">
-        <p class="font-26 flex">
+        <p class="font-22 flex">
           Perlu
           <span class="font-bold">BANTUAN?</span> Hubungi kami :
           <span class="font-bold">0274-5305505</span>.
@@ -343,15 +384,15 @@
         <div class="flex-row-sp flex-wrap">
           <div class="flex-column">
             <p
-              class="font-info font-8 mv-5"
+              class="font-info font-10 mv-5"
             >Copyright &copy;2016 NiagaHoster | Hosting Powered by PHP7, CloudLinux, CloudFlare, BitNinja and DC Biznet Technovillage Jakarta</p>
             <p
-              class="font-info font-8 mv-5"
+              class="font-info font-10 mv-5"
             >Cloud VPS murah powered by WEbuzo softaculous, intel SSD and cloud computing technology</p>
           </div>
           <div>
-            <button class="font-8">Syarat dan Ketentuan</button> |
-            <button class="font-8">Kebijakan Privasi</button>
+            <button class="font-10">Syarat dan Ketentuan</button> |
+            <button class="font-10">Kebijakan Privasi</button>
           </div>
         </div>
       </div>
