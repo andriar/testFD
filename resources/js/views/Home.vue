@@ -110,7 +110,12 @@
         <div class="p-10" :class="promo.best_price ? 'best-2' : ''">
           <span class="font-bold">{{promo.users}}</span> Pengguna terdaftar
         </div>
-        <div class="p-10"></div>
+        <div class="p-10">
+          <div class="mv-5" v-for="(feature, index) in promo.features" :key="index">
+            <span class="font-bold">{{feature[0]}}</span>
+            {{feature[1]}}
+          </div>
+        </div>
         <div class="p-10">
           <button
             :class="promo.best_price ? 'btn-blue-rounded': 'btn-white-outline-rounded'"

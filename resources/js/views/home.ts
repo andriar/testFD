@@ -217,6 +217,15 @@ export default class Home extends Vue {
 		},
 	];
 
+	mounted() {
+		this.promos = this.promos.map((el: any) => {
+			return {
+				...el,
+				features: Object.entries(el.feature),
+			};
+		});
+	}
+
 	whoBestSeller(best: boolean) {
 		return best ? 'best flex-column border image-container  p-5' : 'flex-column border image-container  p-5';
 	}
