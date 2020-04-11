@@ -142,3 +142,17 @@ use Illuminate\Http\Request;
   Route::get('refractions/{id}', 'RefractionController@show');
   Route::patch('refractions/{id}', 'RefractionController@update');
   Route::delete('refractions/{id}', 'RefractionController@delete');
+
+  Route::get('promos', 'PromoController@index');
+  Route::post('promos', 'PromoController@create');
+  Route::post('promos/bulk', 'PromoController@bulk');
+  Route::get('promos/{id}', 'PromoController@show');
+  Route::patch('promos/{id}', 'PromoController@update');
+  Route::delete('promos/{id}', 'PromoController@delete');
+
+  Route::get('features', 'FeatureController@index');
+  Route::post('features', 'FeatureController@create');
+  Route::post('features/bulk', 'FeatureController@bulk');
+  Route::get('features/{id}', 'FeatureController@show');
+  Route::patch('features/{id}', 'FeatureController@update');
+  Route::delete('features/{id}', 'FeatureController@delete');

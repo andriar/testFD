@@ -97,23 +97,26 @@
           <div class="ribbon-green">BEST SELLER</div>
         </div>
         <div
-          class="promo-table font-bold font-20 p-10"
-          :class="promo.best_price ? 'best' : ''"
+          class="font-bold font-20 p-10"
+          :class="promo.best_price ? 'best' : 'border-bottom'"
         >{{promo.title}}</div>
-        <div class="p-10 price" :class="promo.best_price ? 'best' : ''">Rp {{promo.price}}</div>
-        <div class="p-10" :class="promo.best_price ? 'best' : ''">
+        <div
+          class="p-10 price"
+          :class="promo.best_price ? 'best' : 'border-bottom'"
+        >Rp {{promo.price}}</div>
+        <div class="p-10" :class="promo.best_price ? 'best' : 'border-bottom'">
           Rp
           <span class="font-bold font-26">{{String (promo.real_price).split('.')[0]}}</span>
           <span class="font-bold">.{{String (promo.real_price).split('.')[1]}}</span>
           / {{promo.time}}
         </div>
-        <div class="p-10" :class="promo.best_price ? 'best-2' : ''">
+        <div class="p-10" :class="promo.best_price ? 'best-2' : 'border-bottom'">
           <span class="font-bold">{{promo.users}}</span> Pengguna terdaftar
         </div>
-        <div class="p-10">
+        <div class="p-10 border-bottom">
           <div class="mv-5" v-for="(feature, index) in promo.features" :key="index">
-            <span class="font-bold">{{feature[0]}}</span>
-            {{feature[1]}}
+            <span class="font-bold">{{feature.title}}</span>
+            {{feature.body}}
           </div>
         </div>
         <div class="p-10">

@@ -238,7 +238,6 @@
 
 .promo-table {
   padding: 5px 10px 5px 10px;
-  width: 200px;
 }
 
 .best {
@@ -442,6 +441,10 @@ button {
             justify-content: space-between;
     padding: 10px;
     position: relative;
+  }
+
+  #help {
+    text-align: center;
   }
 
   .module {
